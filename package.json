@@ -1,0 +1,46 @@
+{
+  "name": "base-webpack",
+  "version": "1.0.0",
+  "description": "A base project configured with Webpack and Typescript",
+  "main": "./dist/dev/main.js",
+  "scripts": {
+    "Dev:Clean": "rimraf dist/dev/*",
+    "Dev:Build": "npm run Dev:Clean && webpack --mode=development --config ./webpack/webpack.config.dev.ts",
+    "Dev:BuildWatch": "npm run Dev:Clean && webpack --mode=development --config ./webpack/webpack.config.dev.ts --watch",
+    "Dev:DevServer": "npm run Dev:Build && webpack-dev-server --hot --config ./webpack/webpack.config.dev.ts",
+    "Dev:Run": "",
+    "---------------------": "",
+    "Prod:Clean": "rimraf dist/prod/*",
+    "Prod:Build": "npm run Prod:Clean && webpack --mode=production --config ./webpack/webpack.config.prod.ts",
+    "Prod:BuildWatch": "npm run Prod:Clean && webpack --mode=production --config ./webpack/webpack.config.prod.ts --watch",
+    "Prod:Run": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiusnonos/base-webpack.git"
+  },
+  "author": "tiusnonos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tiusnonos/base-webpack/issues"
+  },
+  "homepage": "https://github.com/tiusnonos/base-webpack#readme",
+  "devDependencies": {
+    "@types/mini-css-extract-plugin": "^0.9.1",
+    "@types/node": "^14.0.5",
+    "@types/webpack": "^4.41.13",
+    "@types/webpack-dev-server": "^3.11.0",
+    "css-loader": "^3.5.3",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "ts-loader": "^7.0.4",
+    "ts-node": "^8.10.1",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
